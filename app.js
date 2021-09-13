@@ -25,7 +25,7 @@ const win = (user,comp) => {
     const userChoice_div=document.getElementById(user);
     userScore_span.innerHTML = userScore;
     compScore_span.innerHTML = compScore;
-    result_p.innerHTML= `${convertToWord(user)} beats ${convertToWord(comp)} User Wins!!`;
+    result_p.innerHTML= `${convertToWord(user)} beats ${convertToWord(comp)}. User Wins!!`;
     userChoice_div.classList.add('green-glow');
     setTimeout(() => userChoice_div.classList.remove('green-glow'), 300);
 }
@@ -34,12 +34,12 @@ const lose = (user,comp) => {
     const userChoice_div=document.getElementById(user);
     userScore_span.innerHTML = userScore;
     compScore_span.innerHTML = compScore;
-    result_p.innerHTML= `${convertToWord(user)} loses to ${convertToWord(comp)} User Loses!!`;
+    result_p.innerHTML= `${convertToWord(user)} loses to ${convertToWord(comp)}. User Loses!!`;
     userChoice_div.classList.add('red-glow');
     setTimeout(() => userChoice_div.classList.remove('red-glow'), 300);
 }
 const draw = (user,comp) => {
-    result_p.innerHTML= `${convertToWord(user)} equals ${convertToWord(comp)} It's a Draw!!`;
+    result_p.innerHTML= `${convertToWord(user)} equals ${convertToWord(comp)}. It's a Draw!!`;
     const userChoice_div=document.getElementById(user);
     userChoice_div.classList.add('grey-glow');
     setTimeout(() => userChoice_div.classList.remove('grey-glow'), 300);
